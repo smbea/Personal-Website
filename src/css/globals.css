@@ -1,0 +1,31 @@
+:root {
+    --header-color: #E1CCBA;
+    --text-color: #303030;
+    --yellow: #D89B00;
+    --pink: #E1CCBA;
+    --lightGrey: #E5E5E5;
+    --body-color: rgb(0,0,0,.8);
+}
+
+html, body {
+    margin: 0;
+    color: var(--body-color);
+}
+
+@font-face {
+    font-family: "Ramona";
+    src: url("../fonts/Ramona-Light.ttf");
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("../fonts/futura_medium.ttf");
+}
+
+.heading {
+    font-family: "Ramona";
+}
+
+.runningtext {
+    font-family: "Futura";
+}
