@@ -36,5 +36,7 @@ module.exports = {
             __key: "pages",
         },
         "gatsby-plugin-jss",
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-fontawesome-css`,
     ],
 };

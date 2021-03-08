@@ -1,11 +1,17 @@
 import React from "react";
 import Landing from "../components/landing";
+import AboutMe from "../components/aboutme";
 
-import "../css/globals.css";
+import "../css/global.scss";
 
 // markup
-const IndexPage = () => (
+const IndexPage = () => {
+    return(
+        <div>
     <Landing />
-);
+    <AboutMe />
+    </div>
+    )
+}
 
 export default IndexPage;
