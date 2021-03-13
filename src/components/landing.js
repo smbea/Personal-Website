@@ -3,10 +3,10 @@ import { createUseStyles } from "react-jss";
 import  NavBar from "../components/navbar.js";
 import mainBlob from "../images/blob.svg";
 import mainPhoto from "../images/mainphoto.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faBehance, faGithubAlt, faLinkedin, faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons'
+    faBehance, faGithubAlt, faLinkedin, faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = createUseStyles({
     blob: {
@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        zIndex:"-1"
+        zIndex: "-1",
     },
     blobContent: {
         display: "flex",
@@ -52,17 +52,17 @@ const useStyles = createUseStyles({
     findmeText: {
         transform: "rotate(90deg)",
         position: "absolute",
-        right:"-3em",
-        fontSize:"20px"
+        right: "-3em",
+        fontSize: "20px",
     },
-    icon:{
+    icon: {
         marginLeft: "0.5em",
         color: "var(--yellow)",
     },
     firstIcon: {
         marginLeft: "1em",
         color: "var(--yellow)",
-    }
+    },
 });
 
 export const Landing = () => {
@@ -72,8 +72,8 @@ export const Landing = () => {
         <div>
             <NavBar />
             <div className={classes.blob}>
-            <div className={`${classes.findmeText} heading`}>
-                    Find me on
+                <div className={`${classes.findmeText} heading`}>
+                    <span>Find me on</span>
                     <FontAwesomeIcon className={classes.firstIcon} icon={faBehance} size="1x" />
                     <FontAwesomeIcon className={classes.icon} icon={faGithubAlt} size="1x" />
                     <FontAwesomeIcon className={classes.icon} icon={faLinkedinIn} size="1x" />
@@ -91,7 +91,7 @@ export const Landing = () => {
                         <div className={classes.blobBody}>
                             <span className="runningtext">I’m a Software Engineer with a passion for UX/UI.</span>
                         </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>

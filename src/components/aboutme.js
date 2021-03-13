@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from "react";
 import { createUseStyles } from "react-jss";
 import mainPhoto from "../images/mainphoto.jpg";
@@ -12,27 +13,27 @@ const useStyles = createUseStyles({
     },
     textContent: {
         display: "flex",
-        flexDirection:"column",
-        width:"55%",
-        marginRight:"8em",
-        fontSize:"20px"
+        flexDirection: "column",
+        width: "55%",
+        marginRight: "8em",
+        fontSize: "20px",
     },
     photosDiv: {
         display: "flex",
-        flexDirection:"column",
+        flexDirection: "column",
     },
     photo: {
-        borderRadius:"100px",
-        width:"180px",
-        height:"180px",
-        objectFit:"cover",
-        margin:"1em 0"
+        borderRadius: "100px",
+        width: "180px",
+        height: "180px",
+        objectFit: "cover",
+        margin: "1em 0",
     },
-    title:{
-        fontSize:"30px",
-        fontWeight:"bold",
-        marginBottom:"2em"
-    }
+    title: {
+        fontSize: "30px",
+        fontWeight: "bold",
+        marginBottom: "2em",
+    },
 });
 
 export const AboutMe = () => {
@@ -49,9 +50,9 @@ export const AboutMe = () => {
                 </span>
             </div>
             <div className={classes.photosDiv}>
-            <img src={mainPhoto} className={classes.photo} />
-            <img src={mainPhoto} className={classes.photo} />
-            <img src={mainPhoto} className={classes.photo} />
+                <img src={mainPhoto} className={classes.photo} />
+                <img src={mainPhoto} className={classes.photo} />
+                <img src={mainPhoto} className={classes.photo} />
 
             </div>
         </div>
