@@ -10,26 +10,8 @@
 html, body {
     margin: 0;
     color: var(--body-color);
+    font-family: "Futura";
 }
-
-@mixin chunky-underline($color, $block: false, $size: 20%, $position: 0%) {
-    background-image: linear-gradient(
-      transparent 0%, 
-      transparent (100% - $size - $position), 
-      $color  (100% - $size - $position), 
-      $color (100% - $position), 
-      transparent (100% - $position), 
-      transparent
-    );
-
-    @if $block {
-        // Add this pseudoelement if you want to make it block-ish
-        &:after {
-          content: '';
-          display: block;
-        }
-      }
-    }
 
 @font-face {
     font-family: "Ramona";
@@ -49,16 +31,3 @@ html, body {
 .heading {
     font-family: "Ramona";
 }
-
-.headingBold {
-    @include chunky-underline(var(--pink), true, 30%, 0%);
-    font-family: "RamonaBold";
-    max-width: fit-content;
-    margin-bottom: 2em;
-    padding: 0 0.2em;
-}
-
-.runningtext {
-    font-family: "Futura";
-}
-

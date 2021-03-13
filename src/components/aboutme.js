@@ -2,6 +2,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import mainPhoto from "../images/mainphoto.jpg";
+import Heading from "./heading";
 
 const useStyles = createUseStyles({
     contentDiv: {
@@ -42,12 +43,21 @@ export const AboutMe = () => {
     return (
         <div className={classes.contentDiv}>
             <div className={classes.textContent}>
-                <span className={`${classes.title} headingBold`}>About Me</span>
-                <span className="runningtext">
-                    Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal. I’m on the last year of my Informatics and Computing Engineering Master’s degree.
-                    <br/><br/>My main interests are mobile and web development but my enthusiasm for technology also manifests itself through UX/UI design. I care about developing a functional yet beautiful product.
-                    <br/><br/>Some of my hobbies include singing, travelling, experimenting with makeup, taking and editing photos. I like hanging out in coffee shops and snuggling with my cat.
-                </span>
+                <Heading title="About Me"/>
+                <div>
+                    <p>
+                        Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
+                        I’m on the last year of my Informatics and Computing Engineering Master’s degree.
+                    </p>
+                    <p>
+                        My main interests are mobile and web development but my enthusiasm for technology also manifests
+                        itself through UX/UI design. I care about developing a functional yet beautiful product.
+                    </p>
+                    <p>
+                        Some of my hobbies include singing, travelling, experimenting with makeup, taking and editing
+                        photos. I like hanging out in coffee shops and snuggling with my cat.
+                    </p>
+                </div>
             </div>
             <div className={classes.photosDiv}>
                 <img src={mainPhoto} className={classes.photo} />
