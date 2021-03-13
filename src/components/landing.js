@@ -5,7 +5,7 @@ import mainBlob from "../images/blob.svg";
 import mainPhoto from "../images/mainphoto.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faBehance, faGithubAlt, faLinkedin, faLinkedinIn,
+    faBehance, faGithubAlt, faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 
 const useStyles = createUseStyles({
@@ -16,7 +16,6 @@ const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        zIndex: "-1",
     },
     blobContent: {
         display: "flex",
@@ -74,9 +73,16 @@ export const Landing = () => {
             <div className={classes.blob}>
                 <div className={`${classes.findmeText} heading`}>
                     <span>Find me on</span>
-                    <FontAwesomeIcon className={classes.firstIcon} icon={faBehance} size="1x" />
-                    <FontAwesomeIcon className={classes.icon} icon={faGithubAlt} size="1x" />
-                    <FontAwesomeIcon className={classes.icon} icon={faLinkedinIn} size="1x" />
+                    <a href="https://www.behance.net/smbea" target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon className={classes.firstIcon} icon={faBehance} size="1x" />
+                    </a>
+                    <a href="https://github.com/smbea" target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon className={classes.icon} icon={faGithubAlt} size="1x" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/smbea/" target="_blank" rel="noreferrer">
+                        <FontAwesomeIcon className={classes.icon} icon={faLinkedinIn} size="1x" />
+                    </a>
+
                 </div>
                 <div className={classes.blobContent}>
                     <img src={mainPhoto} className={classes.mainPhoto}/>
