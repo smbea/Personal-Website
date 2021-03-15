@@ -50,7 +50,7 @@ const useStyles = createUseStyles({
     },
     findmeText: {
         transform: "rotate(90deg)",
-        position: "absolute",
+        position: "fixed",
         right: "-3em",
         fontSize: "20px",
     },

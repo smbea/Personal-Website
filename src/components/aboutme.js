@@ -3,6 +3,7 @@ import React from "react";
 import { createUseStyles } from "react-jss";
 import mainPhoto from "../images/mainphoto.jpg";
 import Heading from "./heading";
+import Layout from "./layout";
 
 const useStyles = createUseStyles({
     contentDiv: {
@@ -15,13 +16,15 @@ const useStyles = createUseStyles({
     textContent: {
         display: "flex",
         flexDirection: "column",
-        width: "55%",
-        marginRight: "8em",
+        maxWidth: "68ch",
         fontSize: "20px",
+        flexGrow: 1,
     },
     photosDiv: {
         display: "flex",
         flexDirection: "column",
+        margin: "0 2em 0 4em",
+
     },
     photo: {
         borderRadius: "100px",
@@ -41,31 +44,33 @@ export const AboutMe = () => {
     const classes = useStyles();
 
     return (
-        <div className={classes.contentDiv}>
-            <div className={classes.textContent}>
-                <Heading title="About Me"/>
-                <div>
-                    <p>
-                        Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
-                        I’m on the last year of my Informatics and Computing Engineering Master’s degree.
-                    </p>
-                    <p>
-                        My main interests are mobile and web development but my enthusiasm for technology also manifests
-                        itself through UX/UI design. I care about developing a functional yet beautiful product.
-                    </p>
-                    <p>
-                        Some of my hobbies include singing, travelling, experimenting with makeup, taking and editing
-                        photos. I like hanging out in coffee shops and snuggling with my cat.
-                    </p>
+        <Layout >
+            <div className={classes.contentDiv}>
+                <div className={classes.textContent}>
+                    <Heading title="About Me"/>
+                    <div>
+                        <p>
+                            Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
+                            I’m on the last year of my Informatics and Computing Engineering Master’s degree.
+                        </p>
+                        <p>
+                            My main interests are mobile and web development but my enthusiasm for technology also manifests
+                            itself through UX/UI design. I care about developing a functional yet beautiful product.
+                        </p>
+                        <p>
+                            Some of my hobbies include singing, travelling, experimenting with makeup, taking and editing
+                            photos. I like hanging out in coffee shops and snuggling with my cat.
+                        </p>
+                    </div>
+                </div>
+                <div className={classes.photosDiv}>
+                    <img src={mainPhoto} className={classes.photo} />
+                    <img src={mainPhoto} className={classes.photo} />
+                    <img src={mainPhoto} className={classes.photo} />
+
                 </div>
             </div>
-            <div className={classes.photosDiv}>
-                <img src={mainPhoto} className={classes.photo} />
-                <img src={mainPhoto} className={classes.photo} />
-                <img src={mainPhoto} className={classes.photo} />
-
-            </div>
-        </div>
+        </Layout>
     );
 };
 
