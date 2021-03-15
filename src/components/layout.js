@@ -3,7 +3,8 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
     layoutDiv: {
-        padding: "0 2em",
+        maxWidth: "80vw",
+        margin: "0 auto",
     },
 });
 

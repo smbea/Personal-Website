@@ -9,7 +9,7 @@ const useStyles = createUseStyles({
     contentDiv: {
         height: "100vh",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         alignItems: "center",
 
     },
