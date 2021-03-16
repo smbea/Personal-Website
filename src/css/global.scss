@@ -3,13 +3,13 @@
     --text-color: #303030;
     --yellow: #D89B00;
     --pink: #E1CCBA;
-    --lightGrey: #E5E5E5;
+    --lightGrey: #C4C4C4;
     --body-color: rgb(0,0,0,.8);
 }
 
 html, body {
     margin: 0;
-    color: var(--body-color);
+    color: var(--text-color);
     font-family: "Futura";
 }
 

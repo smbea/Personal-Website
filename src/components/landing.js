@@ -57,11 +57,18 @@ const useStyles = createUseStyles({
     icon: {
         marginLeft: "0.5em",
         color: "var(--yellow)",
+        "&:hover": {
+            transform: "scale(1.1)",
+        },
     },
     firstIcon: {
         marginLeft: "1em",
         color: "var(--yellow)",
+        "&:hover": {
+            transform: "scale(1.1)",
+        },
     },
+
 });
 
 export const Landing = () => {
