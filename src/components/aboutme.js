@@ -58,6 +58,12 @@ export const AboutMe = () => {
                             itself through UX/UI design. I care about developing a functional yet beautiful product.
                         </p>
                         <p>
+                            In my free time, I have done a bit of freelancing on
+                            <a href="fiverr.com/users/thesmbea" target="_blank" rel="noreferrer"> Fiverr </a>
+                            as well as helped build and manage my mother's small
+                            business digital presence.
+                        </p>
+                        <p>
                             Some of my hobbies include singing, travelling, experimenting with makeup, taking and editing
                             photos. I like hanging out in coffee shops and snuggling with my cat.
                         </p>
