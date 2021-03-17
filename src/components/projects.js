@@ -4,19 +4,17 @@ import Heading from "./heading";
 import Layout from "./layout";
 import Card from "./card";
 import sinf from "../images/sinf.png";
-import episaProject from "../images/episaproject.png";
+import episaProject from "../images/episaProject.png";
 
 const useStyles = createUseStyles({
     contentDiv: {
         height: "100vh",
     },
     grid: {
-        display: "flex",
+        display: "grid",
+        "grid-template-columns": "repeat(auto-fit, minmax(350px, 1fr))",
+        gridGap: "10px",
         justifyContent: "center",
-    },
-    column: {
-        display: "flex",
-        flexDirection: "column",
     },
 });
 
@@ -29,51 +27,54 @@ export const Projects = () => {
                 <Heading title="Projects"/>
 
                 <div className={styles.grid}>
-                    <div className={styles.column}>
-                        <Card
-                            title="PassengerConnect"
-                            description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
-                    ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
-                            linkGithub="https://github.com/semanadeinformatica/website-2019"
-                            linkBehance="https://www.behance.net/gallery/106115671/SINF19"
-                        />
-                        <Card
-                            title="Episa"
-                            image={episaProject}
-                            description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
-                    ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
-                            linkBehance="https://www.behance.net/gallery/106123541/EPISA-Project-Redesign"
-                        />
+                    <Card
+                        title="My project"
+                        image={sinf}
 
-                    </div>
-                    <div className={styles.column}>
-                        <Card
-                            title="SINF18 & SINF29"
-                            image={sinf}
-                            description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
-                    ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh
-                    Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
+                        description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
                     ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
-                            linkGithub="https://github.com/semanadeinformatica/website-2019"
-                            linkBehance="https://www.behance.net/gallery/106115671/SINF19"
-                        />
-                    </div>
-                    <div className={styles.column} >
-                        <Card
-                            title="Brisk"
-                            description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
+                        linkGithub="https://github.com/semanadeinformatica/website-2019"
+                        linkBehance="https://www.behance.net/gallery/106115671/SINF19"
+                        keywords={[{ id: 1, kw: "kw1" }, { id: 2, kw: "kw2" }]}
+                    />
+                    <Card
+                        title="My project"
+                        image={episaProject}
+                        description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
                     ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
-                            linkGithub="https://github.com/semanadeinformatica/website-2019"
-                            linkBehance="https://www.behance.net/gallery/106115671/SINF19"
-                        />
-                        <Card
-                            title="Episa"
-                            image={episaProject}
-                            description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
+                        linkGithub="https://github.com/semanadeinformatica/website-2019"
+                        linkBehance="https://www.behance.net/gallery/106115671/SINF19"
+                    />
+
+                    <Card
+                        title="My project"
+                        description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
                     ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
-                            linkBehance="https://www.behance.net/gallery/106123541/EPISA-Project-Redesign"
-                        />
-                    </div>
+                        linkBehance="https://www.behance.net/gallery/106123541/EPISA-Project-Redesign"
+                    />
+                    <Card
+                        title="My project"
+                        image={sinf}
+                        description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
+                    ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
+                        linkBehance="https://www.behance.net/gallery/106123541/EPISA-Project-Redesign"
+                    />
+                    <Card
+                        title="My project"
+                        description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
+                    ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
+                        linkBehance="https://www.behance.net/gallery/106123541/EPISA-Project-Redesign"
+                    />
+
+
+                    <Card
+                        title="My project"
+                        description="Some tect about hduh  hdihwi duhdiu diwuh diwhei duh idhu uh iu
+                    ewiuh Some tect about hduh hdihwi duhdiu diwuh diwhei duh idhu uh iu ewiuh"
+                        linkGithub="https://github.com/semanadeinformatica/website-2019"
+                        linkBehance="https://www.behance.net/gallery/106115671/SINF19"
+                    />
+
 
                 </div>
             </div>
