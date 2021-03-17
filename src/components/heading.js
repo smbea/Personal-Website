@@ -11,7 +11,6 @@ const useStyles = createUseStyles(
             bottom: 0,
             left: 0,
             zIndex: "-1",
-            borderRadius: "10px",
         },
         title: {
             fontFamily: "RamonaBold",
