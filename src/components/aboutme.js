@@ -4,6 +4,9 @@ import { createUseStyles } from "react-jss";
 import mainPhoto from "../images/mainphoto.jpg";
 import Heading from "./heading";
 import Layout from "./layout";
+import yellowPhotoBlob from "../images/yellowPhotoBlob.png";
+import pinkPhotoBlob from "../images/pinkPhotoBlob.png";
+import greyPhotoBlob from "../images/greyPhotoBlob.png";
 
 const useStyles = createUseStyles({
     contentDiv: {
@@ -24,7 +27,16 @@ const useStyles = createUseStyles({
         display: "flex",
         flexDirection: "column",
         margin: "0 2em 0 4em",
-
+        position: "relative",
+        width: "237px",
+        alignItems: "center",
+    },
+    blobDiv: {
+        position: "absolute",
+        zIndex: "-1",
+    },
+    photoBlob: {
+        marginTop: "0.8em",
     },
     photo: {
         borderRadius: "100px",
@@ -69,7 +81,13 @@ export const AboutMe = () => {
                         </p>
                     </div>
                 </div>
+
                 <div className={classes.photosDiv}>
+                    <div className={classes.blobDiv}>
+                        <img src={yellowPhotoBlob} className={classes.photoBlob} />
+                        <img src={pinkPhotoBlob}  />
+                        <img src={greyPhotoBlob} className={classes.photoBlob} />
+                    </div>
                     <img src={mainPhoto} className={classes.photo} />
                     <img src={mainPhoto} className={classes.photo} />
                     <img src={mainPhoto} className={classes.photo} />
