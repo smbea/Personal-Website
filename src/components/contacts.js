@@ -23,6 +23,7 @@ const useStyles = createUseStyles({
 
     },
     downloadCVbutton: {
+        cursor: "pointer",
         fontSize: "16px",
         fontFamily: "Futura",
         margin: "3em 0  2em 0",
@@ -67,7 +68,7 @@ export const Contacts = () => {
 
     return (
         <Layout>
-            <div className={styles.contentDiv} >
+            <div id="contacts" className={styles.contentDiv} >
                 <span className={styles.contactMe}>If you wish to contact me</span>
                 <a className={`${styles.email} link `} href="mailto:bea.smendes98@gmail.com">Email Me</a>
                 <a download id="link" href="../images/cv.pdf">

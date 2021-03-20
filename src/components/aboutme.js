@@ -50,6 +50,9 @@ const useStyles = createUseStyles({
         fontWeight: "bold",
         marginBottom: "2em",
     },
+    aboutMeLink: {
+        margin: "0 0.5em",
+    },
 });
 
 export const AboutMe = () => {
@@ -57,7 +60,7 @@ export const AboutMe = () => {
 
     return (
         <Layout >
-            <div className={classes.contentDiv}>
+            <div id="aboutme" className={classes.contentDiv}>
                 <div className={classes.textContent}>
                     <Heading title="About Me"/>
                     <div>
@@ -71,7 +74,7 @@ export const AboutMe = () => {
                         </p>
                         <p>
                             In my free time, I have done a bit of freelancing on
-                            <a href="fiverr.com/users/thesmbea" target="_blank" rel="noreferrer" className="link"> Fiverr </a>
+                            <a href="fiverr.com/users/thesmbea" target="_blank" rel="noreferrer" className={`${classes.aboutMeLink} link`}>Fiverr</a>
                             as well as helped build and manage my mother's small
                             business digital presence.
                         </p>

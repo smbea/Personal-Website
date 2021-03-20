@@ -1,26 +1,38 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import  NavBar from "../components/navbar.js";
-import mainBlob from "../images/blob.svg";
 import mainPhoto from "../images/mainphoto.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBehance, faGithubAlt, faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const useStyles = createUseStyles({
     blob: {
-        background: `center no-repeat url(${mainBlob})`,
         height: "100vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
     },
+    shape: {
+        position: "absolute",
+        width: "650px",
+        height: "500px",
+        zIndex: -1,
+        padding: "1em",
+        background: "var(--pink)",
+        animation: "morph 10s ease-in-out infinite",
+        borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
+        transition: "all 1s ease-in-out",
+        marginTop: "1em",
+
+    },
     blobContent: {
         display: "flex",
-        height: "30rem",
+        height: "470px",
         width: "38rem",
+        marginTop: "1em",
     },
     mainPhoto: {
         borderRadius: "10px",
@@ -75,35 +87,33 @@ export const Landing = () => {
     const classes = useStyles();
 
     return (
-        <div>
-            <NavBar />
-            <div className={classes.blob}>
-                <div className={`${classes.findmeText} heading`}>
-                    <span>Find me on</span>
-                    <a href="https://www.behance.net/smbea" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon className={classes.firstIcon} icon={faBehance} size="1x" />
-                    </a>
-                    <a href="https://github.com/smbea" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon className={classes.icon} icon={faGithubAlt} size="1x" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/smbea/" target="_blank" rel="noreferrer">
-                        <FontAwesomeIcon className={classes.icon} icon={faLinkedinIn} size="1x" />
-                    </a>
+        <div id="" className={classes.blob}>
+            <div className={classes.shape}/>
+            <div className={`${classes.findmeText} heading`}>
+                <span>Find me on</span>
+                <a href="https://www.behance.net/smbea" target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon className={classes.firstIcon} icon={faBehance} size="1x" />
+                </a>
+                <a href="https://github.com/smbea" target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon className={classes.icon} icon={faGithubAlt} size="1x" />
+                </a>
+                <a href="https://www.linkedin.com/in/smbea/" target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon className={classes.icon} icon={faLinkedinIn} size="1x" />
+                </a>
 
-                </div>
-                <div className={classes.blobContent}>
-                    <img src={mainPhoto} className={classes.mainPhoto}/>
-                    <div className={classes.blobText}>
-                        <div className={`${classes.blobTitle} heading`}>
-                            <span>Hello
-                                <span className={classes.dot}>.
-                                </span>
-                                <br />I am Beatriz
+            </div>
+            <div className={classes.blobContent}>
+                <img src={mainPhoto} className={classes.mainPhoto} width="350" height="470"/>
+                <div className={classes.blobText}>
+                    <div className={`${classes.blobTitle} heading`}>
+                        <span>Hello
+                            <span className={classes.dot}>.
                             </span>
-                        </div>
-                        <div className={classes.blobBody}>
-                            <span className="runningtext">I’m a Software Engineer with a passion for UX/UI.</span>
-                        </div>
+                            <br />I am Beatriz
+                        </span>
+                    </div>
+                    <div className={classes.blobBody}>
+                        <span className="runningtext">I’m a Software Engineer with a passion for UX/UI.</span>
                     </div>
                 </div>
             </div>

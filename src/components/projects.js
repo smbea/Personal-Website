@@ -8,7 +8,8 @@ import episaProject from "../images/episaProject.png";
 
 const useStyles = createUseStyles({
     contentDiv: {
-        height: "100vh",
+        minHeight: "100vh",
+        paddingTop: "1em",
     },
     grid: {
         display: "grid",
@@ -23,7 +24,7 @@ export const Projects = () => {
 
     return (
         <Layout>
-            <div className={styles.contentDiv}>
+            <div id="projects" className={styles.contentDiv}>
                 <Heading title="Projects"/>
 
                 <div className={styles.grid}>
