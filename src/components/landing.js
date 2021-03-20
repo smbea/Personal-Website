@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faBehance, faGithubAlt, faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import scrollTo from "gatsby-plugin-smoothscroll";
 
 const useStyles = createUseStyles({
     blob: {
