@@ -4,7 +4,7 @@ import Heading from "./heading";
 import Layout from "./layout";
 import Card from "./card";
 import sinf from "../images/sinf.png";
-import episaProject from "../images/episaProject.png";
+import episaProject from "../images/episaproject.png";
 
 const useStyles = createUseStyles({
     contentDiv: {
