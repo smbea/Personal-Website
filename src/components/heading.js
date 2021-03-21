@@ -16,11 +16,12 @@ const useStyles = createUseStyles(
             fontFamily: "RamonaBold",
             margin: 0,
             padding: "0 0.2em",
+            fontSize: "1.7rem",
         },
         container: {
             position: "relative",
             width: "fit-content",
-            marginBottom: "3em",
+            marginBottom: "2em",
         },
     }
 );

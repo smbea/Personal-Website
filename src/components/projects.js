@@ -8,8 +8,9 @@ import episaProject from "../images/episaProject.png";
 
 const useStyles = createUseStyles({
     contentDiv: {
-        minHeight: "100vh",
-        paddingTop: "1em",
+        minHeight: "90vh",
+        paddingTop: "4em",
+        marginBottom: "5em",
     },
     grid: {
         display: "grid",
