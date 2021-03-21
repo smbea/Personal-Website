@@ -1,7 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import Layout from "./layout";
-import wave from "../images/wave.svg";
+import Wave from "./wave";
 
 const useStyles = createUseStyles({
     contentDiv: {
@@ -27,40 +27,19 @@ const useStyles = createUseStyles({
         fontSize: "16px",
         fontFamily: "Futura",
         margin: "3em 0  2em 0",
-        background: "var(--yellow)",
-        border: "none",
-        color: "white",
+        border: "2px solid var(--yellow)",
+        background: "none",
+        color: "var(--yellow)",
         borderRadius: "5px",
         padding: "0.6em 1em",
         fontWeight: "bold",
-    },
-    waveContainer: {
-        zIndex: "-1",
-        width: "99vw",
-        height: "19vh",
-        position: "relative",
-        overflow: "hidden",
-    },
-    wave: {
-        width: "250vw",
-        height: "18vh",
-        background: `url(${wave}) repeat-x`,
-        position: "absolute",
-        bottom: "-15px",
-        animation: "wave 40s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite",
-        transform: "translate3d(0, 0, 0)",
-
-        "&:nth-of-type(2)": {
-            bottom: "-20px",
-            animation: "wave 25s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 4s ease -1.25s infinite",
-            opacity: 0.8,
-
-        },
-        "&:nth-of-type(1)": {
-            opacity: 1,
+        transition: "0.5s",
+        "&:hover": {
+            borderRadius: "50px",
+            background: "var(--yellow)",
+            color: "white",
         },
     },
-
 });
 
 export const Contacts = () => {
@@ -77,11 +56,7 @@ export const Contacts = () => {
                     </button>
                 </a>
 
-                <div className={styles.waveContainer}>
-                    <div className={styles.wave}/>
-                    <div className={styles.wave}/>
-
-                </div>
+                <Wave />
 
             </div>
         </Layout>
