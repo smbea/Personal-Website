@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { createUseStyles } from "react-jss";
-import Bigb from "../images/bigb.inline.svg";
+import Bigb from "../../images/bigb.inline.svg";
 import DarkModeToggle from "react-dark-mode-toggle";
-import yellowBlob from "../images/yellowBlob.svg";
+import yellowBlob from "../../images/yellowBlob.svg";
 
 const useStyles = createUseStyles({
     navBar: {
         display: "flex",
         justifyContent: "space-between",
-        height: "70px",
-        width: "96vw",
-        position: "absolute",
         margin: "1.2em 2em",
-        fontSize: "18px",
-        zIndex: "1",
-
     },
     navLinks: {
         display: "flex",
@@ -31,9 +25,9 @@ const useStyles = createUseStyles({
             opacity: 1        },
     },
     navTextItems: {
-        marginRight: "2em",
+        marginRight: "1.5em",
         display: "flex",
-        alignItems: "flex-start",
+        alignItems: "center",
         maxHeight: "30px",
     },
     hoverBlob: {
@@ -43,16 +37,35 @@ const useStyles = createUseStyles({
         left: "-8px",
         top: "-4px",
     },
+    darkToogle: {
+        marginLeft: "1em",
+        height: "25px",
+    },
+    brandIcon: {
+        transition: "0.5s",
+    },
 });
 
-export const NavBar = () => {
+
+export const NavBarSkeleton = () => {
     const classes = useStyles();
     const [isDarkMode, setIsDarkMode] = useState(() => false);
+    const [scroll, setScroll] = useState(false);
+
+    const setNavBar = () => {
+        if (document.documentElement.scrollTop > 0) setScroll(true);
+        else setScroll(false);
+    };
+
+    useEffect(() => {
+        setNavBar();
+        window.addEventListener("scroll", setNavBar);
+    });
 
     return (
         <nav className={classes.navBar}>
             <a href="#">
-                <img src={Bigb} height="120px"/>
+                <img src={Bigb} className={scroll ? classes.brandIconScroll : classes.brandIcon} height="120px"/>
             </a>
             <div className={`${classes.navTextItems} runningtext`}>
                 <div className={classes.navLinks}>
@@ -70,14 +83,16 @@ export const NavBar = () => {
                         <a href="#contacts">CV & Contacts</a>
                     </div>
                 </div>
-                <DarkModeToggle
-                    onChange={setIsDarkMode}
-                    checked={isDarkMode}
-                    size={50}
-                />
+                <div className={classes.darkToogle}>
+                    <DarkModeToggle
+                        onChange={setIsDarkMode}
+                        checked={isDarkMode}
+                        size={50}
+                    />
+                </div>
             </div>
         </nav>
     );
 };
 
-export default NavBar;
+export default NavBarSkeleton;
