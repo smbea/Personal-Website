@@ -1,10 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
 import mainPhoto from "../images/mainphoto.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faBehance, faGithubAlt, faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
+import { useWindowSize } from "../hooks/window-size";
+import FindMe from "./findme";
 
 const useStyles = createUseStyles({
     blob: {
@@ -16,8 +14,12 @@ const useStyles = createUseStyles({
     },
     shape: {
         position: "absolute",
-        width: "650px",
-        height: "500px",
+        width: "60vw",
+        height: "50vw",
+        minWidth: "580px",
+        maxWidth: "650px",
+        minHeight: "500px",
+        maxHeight: " 500px",
         zIndex: -1,
         padding: "1em",
         background: "var(--pink)",
@@ -29,13 +31,18 @@ const useStyles = createUseStyles({
     },
     blobContent: {
         display: "flex",
-        height: "470px",
+        height: "fit-contents",
         width: "38rem",
         marginTop: "1em",
     },
     mainPhoto: {
         borderRadius: "10px",
         marginBottom: 0,
+        width: "350px",
+        height: "40vw",
+        minHeight: "420px",
+        maxHeight: "470px",
+        objectFit: "cover",
     },
     blobText: {
         display: "flex",
@@ -84,25 +91,16 @@ const useStyles = createUseStyles({
 
 export const Landing = () => {
     const classes = useStyles();
+    const desktop = (useWindowSize() === "desktop");
 
     return (
         <div id="" className={classes.blob}>
             <div className={classes.shape}/>
-            <div className={`${classes.findmeText} heading`}>
-                <span>Find me on</span>
-                <a href="https://www.behance.net/smbea" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon className={classes.firstIcon} icon={faBehance} size="1x" />
-                </a>
-                <a href="https://github.com/smbea" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon className={classes.icon} icon={faGithubAlt} size="1x" />
-                </a>
-                <a href="https://www.linkedin.com/in/smbea/" target="_blank" rel="noreferrer">
-                    <FontAwesomeIcon className={classes.icon} icon={faLinkedinIn} size="1x" />
-                </a>
-
-            </div>
+            {desktop ?
+                <FindMe absolute={true}/>
+                : null}
             <div className={classes.blobContent}>
-                <img src={mainPhoto} className={classes.mainPhoto} width="350" height="470"/>
+                <img src={mainPhoto} className={classes.mainPhoto} />
                 <div className={classes.blobText}>
                     <div className={`${classes.blobTitle} heading`}>
                         <span>Hello

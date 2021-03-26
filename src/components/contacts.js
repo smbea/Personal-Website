@@ -1,5 +1,7 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { useWindowSize } from "../hooks/window-size";
+import FindMe from "./findme";
 import Layout from "./layout";
 import Wave from "./wave";
 
@@ -20,13 +22,12 @@ const useStyles = createUseStyles({
         fontFamily: "RamonaBold",
         overflow: "inherit",
         color: "var(--text-color)",
-
     },
     downloadCVbutton: {
         cursor: "pointer",
         fontSize: "16px",
         fontFamily: "Futura",
-        margin: "3em 0  2em 0",
+        margin: "3em 0 1.5em 0",
         border: "2px solid var(--yellow)",
         background: "none",
         color: "var(--yellow)",
@@ -44,6 +45,7 @@ const useStyles = createUseStyles({
 
 export const Contacts = () => {
     const styles = useStyles();
+    const desktop = (useWindowSize() === "desktop");
 
     return (
         <Layout>
@@ -55,9 +57,10 @@ export const Contacts = () => {
                         Download CV
                     </button>
                 </a>
-
+                {desktop ?
+                    null
+                    : <FindMe />}
                 <Wave />
-
             </div>
         </Layout>
     );

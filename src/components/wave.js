@@ -9,6 +9,7 @@ const useStyles = createUseStyles({
         height: "19vh",
         position: "relative",
         overflow: "hidden",
+        marginTop: "2em",
     },
     wave: {
         width: "250vw",
