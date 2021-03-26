@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss";
 import Bigb from "../../images/bigb.inline.svg";
 import DarkModeToggle from "react-dark-mode-toggle";
 import yellowBlob from "../../images/yellowBlob.svg";
+import { useWindowSize } from "../../hooks/window-size";
 
 const useStyles = createUseStyles({
     navBar: {
@@ -43,6 +44,13 @@ const useStyles = createUseStyles({
     },
     brandIcon: {
         transition: "0.5s",
+        maxHeight: "120px",
+        minHeight: "100px",
+        height: "10vw",
+    },
+    brandIconScroll: {
+        transition: "0.5s",
+        height: "40px",
     },
 });
 
@@ -61,6 +69,7 @@ export const NavBarSkeleton = () => {
         setNavBar();
         window.addEventListener("scroll", setNavBar);
     });
+
 
     return (
         <nav className={classes.navBar}>
