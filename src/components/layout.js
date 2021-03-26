@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
         margin: "0 auto",
     },
     minimizedLayout: {
-        maxWidth: "90vw",
+        maxWidth: "85vw",
         margin: "0 auto",
     },
 });
