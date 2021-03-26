@@ -1,20 +1,26 @@
 /* eslint-disable max-len */
 import React from "react";
 import { createUseStyles } from "react-jss";
-import mainPhoto from "../images/mainphoto.jpg";
-import Heading from "./heading";
-import Layout from "./layout";
-import yellowPhotoBlob from "../images/yellowPhotoBlob.png";
-import pinkPhotoBlob from "../images/pinkPhotoBlob.png";
-import greyPhotoBlob from "../images/greyPhotoBlob.png";
+import Heading from "../heading";
+import Layout from "../layout";
+import { useWindowSize } from "../../hooks/window-size";
+import PhotoBlobs from "./photoblobs";
 
 const useStyles = createUseStyles({
     contentDiv: {
-        height: "100vh",
+        height: "80vh",
+        minHeight: "600px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
 
+    },
+    minimizedSection: {
+        height: "65vh",
+
+    },
+    verticalDisplay: {
+        flexDirection: "column",
     },
     textContent: {
         display: "flex",
@@ -22,28 +28,6 @@ const useStyles = createUseStyles({
         maxWidth: "68ch",
         fontSize: "20px",
         flexGrow: 1,
-    },
-    photosDiv: {
-        display: "flex",
-        flexDirection: "column",
-        margin: "0 2em 0 4em",
-        position: "relative",
-        width: "237px",
-        alignItems: "center",
-    },
-    blobDiv: {
-        position: "absolute",
-        zIndex: "-1",
-    },
-    photoBlob: {
-        marginTop: "0.8em",
-    },
-    photo: {
-        borderRadius: "100px",
-        width: "180px",
-        height: "180px",
-        objectFit: "cover",
-        margin: "1em 0",
     },
     title: {
         fontSize: "30px",
@@ -57,15 +41,19 @@ const useStyles = createUseStyles({
 
 export const AboutMe = () => {
     const classes = useStyles();
+    const desktop = (useWindowSize() === "desktop");
 
     return (
         <Layout >
-            <div id="aboutme" className={classes.contentDiv}>
+            <div id="aboutme" className={desktop ? classes.contentDiv : `${classes.contentDiv} ${classes.minimizedSection}` }>
                 <div className={classes.textContent}>
                     <Heading title="About Me"/>
                     <div>
                         <p>
-                            Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
+                            Hey there!
+                        </p>
+                        <p>
+                            My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
                             I’m on the last year of my Informatics and Computing Engineering Master’s degree.
                         </p>
                         <p>
@@ -84,18 +72,7 @@ export const AboutMe = () => {
                         </p>
                     </div>
                 </div>
-
-                <div className={classes.photosDiv}>
-                    <div className={classes.blobDiv}>
-                        <img src={yellowPhotoBlob} className={classes.photoBlob} />
-                        <img src={pinkPhotoBlob}  />
-                        <img src={greyPhotoBlob} className={classes.photoBlob} />
-                    </div>
-                    <img src={mainPhoto} className={classes.photo} />
-                    <img src={mainPhoto} className={classes.photo} />
-                    <img src={mainPhoto} className={classes.photo} />
-
-                </div>
+                {desktop ? <PhotoBlobs/> : null}
             </div>
         </Layout>
     );
