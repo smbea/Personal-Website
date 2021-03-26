@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const getDevice = () => {
     if (document.documentElement.clientWidth > 800)
         return "desktop";
-    else if (document.documentElement.clientWidth <= 800 && document.documentElement.clientWidth >= 576)
+    else if (document.documentElement.clientWidth <= 800 && document.documentElement.clientWidth >= 600)
         return "tablet";
     else return "mobile";
 };

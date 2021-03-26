@@ -1,33 +1,19 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import mainPhoto from "../images/mainphoto.jpg";
-import { useWindowSize } from "../hooks/window-size";
-import FindMe from "./findme";
+import mainPhoto from "../../images/mainphoto.jpg";
+import { useWindowSize } from "../../hooks/window-size";
+import FindMe from "../findme";
+import BlobShape from "./blob-shape";
+import MobileLayout from "./mobile-layout";
 
 const useStyles = createUseStyles({
     blob: {
         height: "100vh",
+        minHeight: "700px",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-    },
-    shape: {
-        position: "absolute",
-        width: "60vw",
-        height: "50vw",
-        minWidth: "580px",
-        maxWidth: "650px",
-        minHeight: "500px",
-        maxHeight: " 500px",
-        zIndex: -1,
-        padding: "1em",
-        background: "var(--pink)",
-        animation: "morph 10s ease-in-out infinite",
-        borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
-        transition: "all 1s ease-in-out",
-        marginTop: "1em",
-
     },
     blobContent: {
         display: "flex",
@@ -66,36 +52,17 @@ const useStyles = createUseStyles({
     dot: {
         color: "var(--yellow)",
     },
-    findmeText: {
-        transform: "rotate(90deg)",
-        position: "fixed",
-        right: "-3em",
-        fontSize: "20px",
-    },
-    icon: {
-        marginLeft: "0.5em",
-        color: "var(--yellow)",
-        "&:hover": {
-            transform: "scale(1.1)",
-        },
-    },
-    firstIcon: {
-        marginLeft: "1em",
-        color: "var(--yellow)",
-        "&:hover": {
-            transform: "scale(1.1)",
-        },
-    },
 
 });
 
 export const Landing = () => {
     const classes = useStyles();
     const desktop = (useWindowSize() === "desktop");
+    const mobile = (useWindowSize() === "mobile");
 
-    return (
+    const Thing = () => (
         <div id="" className={classes.blob}>
-            <div className={classes.shape}/>
+            <BlobShape />
             {desktop ?
                 <FindMe absolute={true}/>
                 : null}
@@ -114,6 +81,12 @@ export const Landing = () => {
                     </div>
                 </div>
             </div>
+        </div>
+    );
+
+    return (
+        <div>
+            {mobile ? <MobileLayout /> : <Thing />}
         </div>
     );
 };
