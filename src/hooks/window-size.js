@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
 const getDevice = () => {
+    if (typeof window === "undefined" || !window.document) {
+        return "desktop";
+    }
+
     if (document.documentElement.clientWidth > 800)
         return "desktop";
     else if (document.documentElement.clientWidth <= 800 && document.documentElement.clientWidth >= 650)
