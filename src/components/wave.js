@@ -1,6 +1,8 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
+import { useWindowSize } from "../hooks/window-size";
 import wave from "../images/wave.svg";
+import waveStatic from "../images/waveStatic.png";
 
 const useStyles = createUseStyles({
     waveContainer: {
@@ -31,16 +33,35 @@ const useStyles = createUseStyles({
         },
     },
 
+    waveStatic: {
+        width: "100%",
+        height: "19vh",
+        objectFit: "cover",
+    },
+
 });
 
 export const Wave = () => {
     const styles = useStyles();
+    const desktop = (useWindowSize() === "desktop");
+
+    const WaveImage = () => {
+        if (!desktop)
+            return (
+                <img className={styles.waveStatic} src={waveStatic}/>
+
+            );
+        else return (
+            <div>
+                <div className={styles.wave}/>
+                <div className={styles.wave}/>
+            </div>
+        );
+    };
 
     return (
         <div className={styles.waveContainer}>
-            <div className={styles.wave}/>
-            <div className={styles.wave}/>
-
+            <WaveImage />
         </div>
 
     );
