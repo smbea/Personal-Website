@@ -6,7 +6,7 @@ const useStyles = createUseStyles({
         marginTop: "-5px",
         width: "inherit",
         height: "2rem",
-        background: "#d8c6b7",
+        background: "var(--pink)",
         fontSize: "14px",
         display: "flex",
         padding: "1px",

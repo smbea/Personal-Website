@@ -39,5 +39,6 @@ module.exports = {
         "gatsby-plugin-sass",
         "gatsby-plugin-fontawesome-css",
         "gatsby-plugin-smoothscroll",
+        "gatsby-plugin-dark-mode",
     ],
 };

@@ -30,7 +30,7 @@ const useStyles = createUseStyles({
     cardBody: {
         display: "flex",
         padding: "1em",
-        background: "white",
+        background: "var(--card-background)",
         height: "100%",
     },
     headerImage: {

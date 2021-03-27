@@ -7,12 +7,11 @@ const useStyles = createUseStyles({
         width: "100vw",
         position: "fixed",
         fontSize: "18px",
-        zIndex: "1",
         zIndex: "100",
     },
     navBarContainerScrolled: {
-        boxShadow: "0px 4px 10px rgb(214 214 214 / 24%)",
-        background: "white",
+        boxShadow: "var(--box-shadow)",
+        background: "var(--background)",
         "& > nav": {
             alignItems: "center",
             margin: "0.2em 2em",
@@ -20,10 +19,13 @@ const useStyles = createUseStyles({
     },
 });
 
+export const ThemeContext = React.createContext({ globalTheme: null, setGlobalTheme: () => {} });
 
 export const NavBar = () => {
     const classes = useStyles();
     const [scroll, setScroll] = useState(false);
+    const [globalTheme, setGlobalTheme] = useState(null);
+
 
     const setNavBar = () => {
         if (document.documentElement.scrollTop > 0) setScroll(true);
@@ -36,9 +38,11 @@ export const NavBar = () => {
     });
 
     return (
-        <div className={`${classes.navBarContainer} ${scroll ? classes.navBarContainerScrolled : null}`}>
-            <NavBarSkeleton />
-        </div>
+        <ThemeContext.Provider value={{ globalTheme, setGlobalTheme }}>
+            <div className={`${classes.navBarContainer} ${scroll ? classes.navBarContainerScrolled : null}`}>
+                <NavBarSkeleton />
+            </div>
+        </ThemeContext.Provider>
     );
 };
 

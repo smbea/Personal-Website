@@ -53,8 +53,8 @@ export const Wave = () => {
             );
         else return (
             <div>
-                <div className={styles.wave}/>
-                <div className={styles.wave}/>
+                <div className={`${styles.wave} wave` }/>
+                <div className={`${styles.wave} wave` }/>
             </div>
         );
     };
