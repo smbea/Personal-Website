@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { createUseStyles } from "react-jss";
+import { createUseStyles, ThemeProvider } from "react-jss";
 import DarkModeToggle from "react-dark-mode-toggle";
+import { ThemeToggler } from "gatsby-plugin-dark-mode";
+import { ThemeContext } from "./navbar";
 
 const useStyles = createUseStyles({
     darkToogle: {
@@ -11,16 +13,35 @@ const useStyles = createUseStyles({
 
 export const ModeToggle = ({ big }) => {
     const classes = useStyles();
-    const [isDarkMode, setIsDarkMode] = useState(() => false);
 
     return (
-        <div className={classes.darkToogle}>
-            <DarkModeToggle
-                onChange={setIsDarkMode}
-                checked={isDarkMode}
-                size={big ? 60 : 50}
-            />
-        </div>
+        <ThemeContext.Consumer>
+            {({ setGlobalTheme }) => (
+                <ThemeToggler>
+                    {({ theme, toggleTheme }) => {
+                        if (theme === null || theme === undefined) {
+                            return null;
+                        } else {
+                            setGlobalTheme(theme);
+                        }
+                        return (
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    onChange={(e) => {
+                                        setGlobalTheme(e.target.checked ? "dark" : "light");
+                                        toggleTheme(e.target.checked ? "dark" : "light");
+                                    }}
+                                    checked={theme === "dark"}
+                                />{" "}
+                                Dark mode
+                            </label>
+                        );
+
+                    }}
+                </ThemeToggler>
+            )}
+        </ThemeContext.Consumer>
     );
 };
 
