@@ -61,7 +61,7 @@ export const Landing = () => {
     const mobile = (useWindowSize() === "mobile");
 
     const Thing = () => (
-        <div id="" className={classes.blob}>
+        <div id="home" className={classes.blob}>
             <BlobShape />
             {desktop ?
                 <FindMe absolute={true}/>

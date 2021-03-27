@@ -47,10 +47,7 @@ export const AboutMe = () => {
                     <Heading title="About Me"/>
                     <div>
                         <p>
-                            Hey there!
-                        </p>
-                        <p>
-                            My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
+                            Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
                             I’m on the last year of my Informatics and Computing Engineering Master’s degree.
                         </p>
                         <p>
