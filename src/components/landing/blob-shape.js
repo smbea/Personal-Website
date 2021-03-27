@@ -19,11 +19,12 @@ const useStyles = createUseStyles({
         height: "65vh",
     },
     dimentionsDesktop: {
+        width: "60vw",
         height: "50vw",
         minWidth: "580px",
-        maxWidth: "650px",
+        maxWidth: "700px",
         minHeight: "500px",
-        maxHeight: " 500px",
+        maxHeight: " 600px",
     },
 });
 

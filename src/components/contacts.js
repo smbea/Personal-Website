@@ -60,7 +60,6 @@ export const Contacts = () => {
                 {desktop ?
                     null
                     : <FindMe />}
-                <Wave />
             </div>
         </Layout>
     );

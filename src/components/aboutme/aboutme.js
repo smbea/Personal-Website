@@ -8,15 +8,12 @@ import PhotoBlobs from "./photoblobs";
 
 const useStyles = createUseStyles({
     contentDiv: {
-        height: "80vh",
+        height: "100vh",
+        paddingTop: "4em",
         minHeight: "600px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-
-    },
-    minimizedSection: {
-        height: "65vh",
 
     },
     verticalDisplay: {
@@ -45,7 +42,7 @@ export const AboutMe = () => {
 
     return (
         <Layout >
-            <div id="aboutme" className={desktop ? classes.contentDiv : `${classes.contentDiv} ${classes.minimizedSection}` }>
+            <div id="aboutme" className={classes.contentDiv}>
                 <div className={classes.textContent}>
                     <Heading title="About Me"/>
                     <div>

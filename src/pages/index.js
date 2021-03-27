@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import NavBar from "../components/nav/navbar.js";
 
 import "../css/global.scss";
+import Wave from "../components/wave";
 
 // markup
 const IndexPage = () => (
@@ -16,6 +17,7 @@ const IndexPage = () => (
         <AboutMe />
         <Projects/>
         <Contacts/>
+        <Wave />
         <Footer/>
     </div>
 );

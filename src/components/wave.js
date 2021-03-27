@@ -5,7 +5,7 @@ import wave from "../images/wave.svg";
 const useStyles = createUseStyles({
     waveContainer: {
         zIndex: "-1",
-        width: "97.5vw",
+        width: "inherit",
         height: "19vh",
         position: "relative",
         overflow: "hidden",
