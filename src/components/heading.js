@@ -10,7 +10,7 @@ const useStyles = createUseStyles(
             background: "var(--pink)",
             bottom: 0,
             left: 0,
-            zIndex: "-1",
+            zIndex: -1,
         },
         title: {
             fontFamily: "RamonaBold",

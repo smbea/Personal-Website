@@ -8,6 +8,7 @@ const useStyles = createUseStyles({
         position: "fixed",
         fontSize: "18px",
         zIndex: "1",
+        zIndex: "100",
     },
     navBarContainerScrolled: {
         boxShadow: "0px 4px 10px rgb(214 214 214 / 24%)",

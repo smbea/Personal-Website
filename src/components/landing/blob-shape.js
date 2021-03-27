@@ -5,7 +5,7 @@ import { useWindowSize } from "../../hooks/window-size";
 const useStyles = createUseStyles({
     shape: {
         position: "absolute",
-        zIndex: -1,
+        zIndex: 0,
         padding: "1em",
         background: "var(--pink)",
         animation: "morph 10s ease-in-out infinite",

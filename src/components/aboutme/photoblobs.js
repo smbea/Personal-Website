@@ -17,8 +17,8 @@ const useStyles = createUseStyles({
     },
     blobDiv: {
         position: "absolute",
-        zIndex: "-1",
-        bottom: "-2em",
+        zIndex: "0",
+        bottom: "-1em",
     },
     photo: {
         borderRadius: "100px",
@@ -26,6 +26,7 @@ const useStyles = createUseStyles({
         height: "180px",
         objectFit: "cover",
         margin: "1em 0",
+        zIndex: "0",
     },
 });
 

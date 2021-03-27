@@ -17,9 +17,9 @@ const useStyles = createUseStyles({
     },
     blobContent: {
         display: "flex",
-        height: "fit-contents",
         width: "38rem",
         marginTop: "1em",
+        zIndex: 0,
     },
     mainPhoto: {
         borderRadius: "10px",

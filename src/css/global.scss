@@ -1,17 +1,34 @@
 :root {
+    --background: white;
+    --card-background: white;
     --header-color: #E1CCBA;
     --text-color: #303030;
     --yellow: #D89B00;
     --pink: #E1CCBA;
     --lightGrey: #C4C4C4;
-    --body-color: rgb(0,0,0,.8);
+    --box-shadow: 0px 4px 10px rgb(214 214 214 / 24%);
 }
 
 html, body {
     margin: 0;
-    color: var(--text-color);
-    font-family: "Futura";
-    scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  font-family: "Futura";
+  scroll-behavior: smooth;
+}
+
+body.dark {
+    --background: #303030;
+    --card-background: #292828;
+    --header-color: #E1CCBA;
+    --text-color: white;
+    --yellow: #D0A73F;
+    --pink: #b8a28e;
+    --lightGrey: #C4C4C4;
+    --box-shadow: 0px 4px 10px rgb(0 0 0 / 24%);
 }
 
 @font-face {
@@ -33,7 +50,7 @@ html, body {
     font-family: "Ramona";
 }
 
-$pink:#e1ccba;
+$pink:var(--pink);
 .link{
         position: relative;
         overflow: hidden;
