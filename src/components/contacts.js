@@ -3,7 +3,6 @@ import { createUseStyles } from "react-jss";
 import { useWindowSize } from "../hooks/window-size";
 import FindMe from "./findme";
 import Layout from "./layout";
-import Wave from "./wave";
 
 const useStyles = createUseStyles({
     contentDiv: {
@@ -52,7 +51,7 @@ export const Contacts = () => {
             <div id="contacts" className={styles.contentDiv} >
                 <span className={styles.contactMe}>If you wish to contact me</span>
                 <a className={`${styles.email} link `} href="mailto:bea.smendes98@gmail.com">Email Me</a>
-                <a download id="link" href="../images/cv.pdf">
+                <a download id="link" href={"/cv.pdf"}>
                     <button type="submit" className={styles.downloadCVbutton}>
                         Download CV
                     </button>
