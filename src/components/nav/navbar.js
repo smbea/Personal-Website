@@ -19,12 +19,9 @@ const useStyles = createUseStyles({
     },
 });
 
-export const ThemeContext = React.createContext({ globalTheme: null, setGlobalTheme: () => {} });
-
 export const NavBar = () => {
     const classes = useStyles();
     const [scroll, setScroll] = useState(false);
-    const [globalTheme, setGlobalTheme] = useState(null);
 
 
     const setNavBar = () => {
@@ -38,11 +35,9 @@ export const NavBar = () => {
     });
 
     return (
-        <ThemeContext.Provider value={{ globalTheme, setGlobalTheme }}>
-            <div className={`${classes.navBarContainer} ${scroll ? classes.navBarContainerScrolled : null}`}>
-                <NavBarSkeleton />
-            </div>
-        </ThemeContext.Provider>
+        <div className={`${classes.navBarContainer} ${scroll ? classes.navBarContainerScrolled : null}`}>
+            <NavBarSkeleton />
+        </div>
     );
 };
 

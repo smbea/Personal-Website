@@ -4,7 +4,6 @@ import Bigb from "../../images/bigb.inline.svg";
 import BigbLight from "../../images/bigb.inline.dark.svg";
 
 import scrollTo from "gatsby-plugin-smoothscroll";
-import { ThemeContext } from "./navbar";
 
 const useStyles = createUseStyles({
     brandIcon: {
@@ -27,16 +26,17 @@ export const BrandIcon = ({ scroll }) => {
     const classes = useStyles();
 
     return (
-        <ThemeContext.Consumer>
-            {({ globalTheme }) => (
-                <a className={classes.a} onClick={() => scrollTo("#home")}>
-                    <img
-                        src={(globalTheme !== "dark") ? Bigb : BigbLight}
-                        className={scroll ? classes.brandIconScroll : classes.brandIcon} height="120px"
-                    />
-                </a>
-            )}
-        </ThemeContext.Consumer>
+        <a className={classes.a} onClick={() => scrollTo("#home")}>
+            <img
+                src={Bigb}
+                className={`${scroll ? classes.brandIconScroll : classes.brandIcon} darkIcon`} height="120px"
+            />
+            <img
+                src={BigbLight}
+                className={`${scroll ? classes.brandIconScroll : classes.brandIcon} lightIcon`} height="120px"
+            />
+        </a>
+
     );
 };
 

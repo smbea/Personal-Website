@@ -18,6 +18,14 @@ body {
   color: var(--text-color);
   font-family: "Futura";
   scroll-behavior: smooth;
+
+  & .lightIcon {
+    display: none;
+  }
+
+  & .darkIcon {
+    display: block;
+  }
 }
 
 body.dark {
@@ -29,6 +37,14 @@ body.dark {
     --pink: #b8a28e;
     --lightGrey: #C4C4C4;
     --box-shadow: 0px 4px 10px rgb(0 0 0 / 24%);
+
+    & .lightIcon {
+      display: block;
+    }
+  
+    & .darkIcon {
+      display: none;
+    }
 
     & .wave {
       background: url("../images/waveDark.svg") repeat-x;

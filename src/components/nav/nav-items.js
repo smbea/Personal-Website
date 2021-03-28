@@ -36,27 +36,27 @@ const useStyles = createUseStyles({
 
 export const NavItems = ({ showMenu }) => {
     const classes = useStyles();
-    const mobile = (useWindowSize() === "mobile");
+    const windowSize = useWindowSize();
 
     return (
         <div className={`${classes.navTextItems} runningtext`}>
 
-            <div className={mobile ? `${classes.navLinks} mobile` : classes.navLinks }>
-                {mobile ?
+            <div className={windowSize === "mobile" ? `${classes.navLinks} mobile` : classes.navLinks }>
+                {windowSize === "mobile" ?
                     <NavItem text="Home" href="#home" showMenu={showMenu}/>
                     : null
                 }
                 <NavItem text="About Me" href="#aboutme" showMenu={showMenu}/>
                 <NavItem text="Projects" href="#projects" showMenu={showMenu}/>
                 <NavItem text="CV & Contacts" href="#contacts" showMenu={showMenu}/>
-                {mobile ?
+                {windowSize === "mobile" ?
                     <div className={`${classes.navToogle} mobile`}>
                         <ModeToggle big={true}/>
                     </div>
                     : null}
             </div>
-            <div className={mobile ? null : classes.navToogle}>
-                {mobile ? null : <ModeToggle/>}
+            <div className={windowSize === "mobile" ? null : classes.navToogle}>
+                {windowSize === "mobile" ? null : <ModeToggle/>}
             </div>
 
         </div>

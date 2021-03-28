@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react";
 
 const getDevice = () => {
-    if (typeof window === "undefined" || !window.document) {
-        return "desktop";
-    }
-
     if (document.documentElement.clientWidth > 800)
         return "desktop";
     else if (document.documentElement.clientWidth <= 800 && document.documentElement.clientWidth >= 650)
@@ -14,13 +10,15 @@ const getDevice = () => {
 
 export const useWindowSize = () => {
 
-    const [device, setDevice] = useState(getDevice());
+    const [device, setDevice] = useState("mobile");
 
     const handleResize = () => {
         setDevice(getDevice());
     };
 
     useEffect(() => {
+        if (typeof window === "undefined") return null;
+        setDevice(getDevice());
         window.addEventListener("resize", handleResize);
         return () => {
             window.removeEventListener("resize", handleResize);
