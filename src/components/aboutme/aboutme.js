@@ -56,7 +56,7 @@ export const AboutMe = () => {
                         </p>
                         <p>
                             In my free time, I have done a bit of freelancing on
-                            <a href="fiverr.com/users/thesmbea" target="_blank" rel="noreferrer" className={`${classes.aboutMeLink} link`}>Fiverr</a>
+                            <a href="https://www.fiverr.com/users/thesmbea" target="_blank" rel="noreferrer" className={`${classes.aboutMeLink} link`}>Fiverr</a>
                             as well as helped build and manage my mother's small
                             business digital presence.
                         </p>
