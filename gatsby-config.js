@@ -40,5 +40,8 @@ module.exports = {
         "gatsby-plugin-fontawesome-css",
         "gatsby-plugin-smoothscroll",
         "gatsby-plugin-dark-mode",
+        "gatsby-plugin-image",
+        "gatsby-plugin-sharp",
+        "gatsby-transformer-sharp",
     ],
 };

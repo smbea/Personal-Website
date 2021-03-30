@@ -1,10 +1,10 @@
 import React from "react";
 import { createUseStyles } from "react-jss";
-import mainPhoto from "../../images/mainphoto.jpg";
 import { useWindowSize } from "../../hooks/window-size";
 import FindMe from "../findme";
 import BlobShape from "./blob-shape";
 import MobileLayout from "./mobile-layout";
+import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = createUseStyles({
     blob: {
@@ -20,15 +20,6 @@ const useStyles = createUseStyles({
         width: "38rem",
         marginTop: "1em",
         zIndex: 0,
-    },
-    mainPhoto: {
-        borderRadius: "10px",
-        marginBottom: 0,
-        width: "350px",
-        height: "40vw",
-        minHeight: "420px",
-        maxHeight: "470px",
-        objectFit: "cover",
     },
     blobText: {
         display: "flex",
@@ -67,7 +58,20 @@ export const Landing = () => {
                 <FindMe absolute={true}/>
                 : null}
             <div className={classes.blobContent}>
-                <img src={mainPhoto} className={classes.mainPhoto} />
+                <StaticImage
+                    src="../../images/mainphoto.jpg"
+                    alt="A picture of me!"
+                    loading="eager"
+                    style={{
+                        borderRadius: "10px",
+                        marginBottom: 0,
+                        width: "350px",
+                        height: "40vw",
+                        minHeight: "420px",
+                        maxHeight: "470px",
+                    }}
+                    placeholder="blurred"
+                />
                 <div className={classes.blobText}>
                     <div className={`${classes.blobTitle} heading`}>
                         <span>Hello
