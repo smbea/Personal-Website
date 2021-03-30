@@ -9,7 +9,7 @@ import yellowBlob from "../images/yellowBlob.svg";
 const useStyles = createUseStyles({
     card: {
         minWidth: "270px",
-        height: "190px",
+        // height: "190px",
         boxShadow: "0.5px 0.5px 3px rgb(0 0 0 / 10%)",
         borderRadius: "5px",
         display: "flex",
@@ -18,7 +18,6 @@ const useStyles = createUseStyles({
         position: "relative",
         "&.tall": {
             gridRow: "span 2",
-            minHeight: "390px",
         },
 
     },
@@ -36,7 +35,6 @@ const useStyles = createUseStyles({
     headerImage: {
         objectFit: "cover",
         borderRadius: "5px 5px 0 0",
-        height: "200px",
     },
     cardTitle: {
         margin: "0",
@@ -70,6 +68,7 @@ const useStyles = createUseStyles({
         color: "var(--yellow)",
         marginRight: ".8em",
         fontSize: "12px",
+        display: "inline-block",
     },
 });
 

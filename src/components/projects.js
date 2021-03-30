@@ -6,6 +6,7 @@ import Card from "./card";
 import sinf from "../images/sinf.png";
 import winerd from "../images/winerd.png";
 import episa from "../images/episaproject.png";
+import { useWindowSize } from "../hooks/window-size";
 
 const useStyles = createUseStyles({
     contentDiv: {
@@ -14,14 +15,22 @@ const useStyles = createUseStyles({
     },
     grid: {
         display: "grid",
-        "grid-template-columns": "repeat(auto-fit, minmax(350px, 1fr))",
+        gridTemplateColumns: ({ device }) => {
+            if (device === "desktop") {
+                return "repeat(3, 1fr)";
+            } else if (device === "tablet") {
+                return "repeat(2, 1fr)";
+            }
+            return "1fr";
+        },
         gridGap: "10px",
         justifyContent: "center",
     },
 });
 
 export const Projects = () => {
-    const styles = useStyles();
+    const device = useWindowSize();
+    const styles = useStyles({ device });
 
     return (
         <Layout>
