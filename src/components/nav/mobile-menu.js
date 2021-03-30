@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
         width: "100vw",
         height: "100vh",
         position: "absolute",
-        background: "var(--pink)",
+        background: "#b8a28e",
         top: 0,
         left: 0,
         display: "none",
