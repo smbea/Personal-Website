@@ -23,9 +23,10 @@ const useStyles = createUseStyles({
     mainPhoto: {
         borderRadius: "10px",
         margin: "4em 0 2em 0",
-        width: "300px",
-        height: "320px",
+        width: "65vw",
+        height: "38vh",
         minHeight: "200px",
+        minWidth: "200px",
         objectFit: "cover",
     },
     blobText: {
@@ -36,7 +37,7 @@ const useStyles = createUseStyles({
 
     },
     blobTitle: {
-        fontSize: "50px",
+        fontSize: "40px",
         display: "flex",
         flexDirection: "column",
         marginBottom: "0.2em",
@@ -71,7 +72,7 @@ export const MobileLayout = () => {
                         </span>
                     </div>
                     <div className={classes.blobBody}>
-                        <span className="runningtext">I’m a Software Engineer with a passion for UX/UI.</span>
+                        <span >I’m a Software Engineer with a passion for UX/UI.</span>
                     </div>
                 </div>
             </div>

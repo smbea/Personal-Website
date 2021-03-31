@@ -90,7 +90,7 @@ export const Landing = () => {
                         </span>
                     </div>
                     <div className={classes.blobBody}>
-                        <span className="runningtext">I’m a Software Engineer with a passion for UX/UI.</span>
+                        <span>I’m a Software Engineer with a passion for UX/UI.</span>
                     </div>
                 </div>
             </div>

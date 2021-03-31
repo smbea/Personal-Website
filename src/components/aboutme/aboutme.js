@@ -8,14 +8,16 @@ import PhotoBlobs from "./photoblobs";
 
 const useStyles = createUseStyles({
     contentDiv: {
-        height: "100vh",
         paddingTop: "4em",
-        minHeight: "600px",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        "&.tablet": {
-            height: "fit-content",
+        "&.fitContent": {
+            minHeight: "fit-content",
+            margin: "0 1em",
+        },
+        "&.desktop": {
+            height: "100vh",
             margin: "0 1em",
         },
     },
@@ -42,11 +44,10 @@ const useStyles = createUseStyles({
 export const AboutMe = () => {
     const classes = useStyles();
     const desktop = (useWindowSize() === "desktop");
-    const tablet = (useWindowSize() === "tablet");
 
     return (
         <Layout >
-            <div id="aboutme" className={tablet ? `${classes.contentDiv} tablet` : classes.contentDiv}>
+            <div id="aboutme" className={desktop ?  `${classes.contentDiv} desktop` : `${classes.contentDiv} fitContent` }>
                 <div className={classes.textContent}>
                     <Heading title="About Me"/>
                     <div>

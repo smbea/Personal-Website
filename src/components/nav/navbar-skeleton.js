@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
         display: "flex",
         justifyContent: "space-between",
         margin: "1.2em 2em",
+        alignItems: "center",
     },
 });
 

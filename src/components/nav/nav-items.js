@@ -17,6 +17,10 @@ const useStyles = createUseStyles({
         display: "flex",
         alignItems: "center",
         maxHeight: "30px",
+        "&.mobile": {
+            marginRight: 0,
+            alignItems: "center",
+        },
     },
     hoverBlob: {
         position: "absolute",
@@ -39,7 +43,7 @@ export const NavItems = ({ showMenu }) => {
     const windowSize = useWindowSize();
 
     return (
-        <div className={`${classes.navTextItems} runningtext`}>
+        <div className={windowSize === "mobile" ? `${classes.navTextItems} mobile` : `${classes.navTextItems}`}>
 
             <div className={windowSize === "mobile" ? `${classes.navLinks} mobile` : classes.navLinks }>
                 {windowSize === "mobile" ?
