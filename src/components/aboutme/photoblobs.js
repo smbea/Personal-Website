@@ -41,7 +41,7 @@ export const PhotoBlobs = () => {
                 <img src={greyPhotoBlob} loading="lazy"alt="Just a blob shape."/>
             </div>
             <StaticImage
-                src="../../images/singing.jpg"
+                src="../../images/singing.webp"
                 alt="A picture of me singing!"
                 loading="lazy"
                 style={{
@@ -54,7 +54,7 @@ export const PhotoBlobs = () => {
                 placeholder="blurred"
             />
             <StaticImage
-                src="../../images/travel.jpg"
+                src="../../images/travel.webp"
                 alt="A picture I took of Venice!"
                 loading="lazy"
                 style={{
@@ -67,7 +67,7 @@ export const PhotoBlobs = () => {
                 placeholder="blurred"
             />
             <StaticImage
-                src="../../images/makeup.JPG"
+                src="../../images/makeup.webp"
                 alt="A picture of me doing makeup!"
                 loading="lazy"
                 style={{

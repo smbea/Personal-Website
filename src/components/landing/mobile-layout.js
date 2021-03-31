@@ -62,7 +62,7 @@ export const MobileLayout = () => {
                 <FindMe absolute={true}/>
                 : null}
             <div className={classes.blobContent}>
-                <img src={mainPhoto} className={classes.mainPhoto} />
+                <img src={mainPhoto} className={classes.mainPhoto} alt="A picture of me"/>
                 <div className={classes.blobText}>
                     <div className={`${classes.blobTitle} heading`}>
                         <span>Hello

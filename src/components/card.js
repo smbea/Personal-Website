@@ -91,7 +91,7 @@ export const Card = (props) => {
 
     return (
         <div className={`${styles.card} ${image ? "tall" : null}`}>
-            <img src={yellowBlob} className={styles.bulletBlob} width="30px"/>
+            <img src={yellowBlob} className={styles.bulletBlob} width="30px" alt="Blob shape"/>
             {image
                 ? <img src={image} className={styles.headerImage} height="180px" loading="lazy" alt="Image of a project" />
                 : null

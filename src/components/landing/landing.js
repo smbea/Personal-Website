@@ -67,7 +67,7 @@ export const Landing = () => {
                 : null}
             <div className={classes.blobContent}>
                 <StaticImage
-                    src="../../images/mainphoto.jpg"
+                    src="../../images/mainphoto.webp"
                     alt="A picture of me!"
                     loading="eager"
                     style={{

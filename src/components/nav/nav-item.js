@@ -43,7 +43,7 @@ export const NavItem = ({ text, href, showMenu }) => {
 
     return (
         <div className={mobile ? `${styles.navItem} mobile` : styles.navItem}>
-            <img className={styles.hoverBlob} src={yellowBlob} height="20px"/>
+            <img className={styles.hoverBlob} src={yellowBlob} height="20px" alt="Blob shape"/>
             <a onClick={scrollToElement}>{text}</a>
         </div>
 
