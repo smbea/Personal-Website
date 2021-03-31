@@ -5,6 +5,7 @@ import mainPhoto from "../../images/mainphoto.jpg";
 import yellowPhotoBlob from "../../images/yellowPhotoBlob.png";
 import pinkPhotoBlob from "../../images/pinkPhotoBlob.png";
 import greyPhotoBlob from "../../images/greyPhotoBlob.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = createUseStyles({
     photosDiv: {
@@ -36,13 +37,49 @@ export const PhotoBlobs = () => {
     return (
         <div className={classes.photosDiv}>
             <div className={classes.blobDiv}>
-                <img src={yellowPhotoBlob} />
-                <img src={pinkPhotoBlob} />
-                <img src={greyPhotoBlob} />
+                <img src={yellowPhotoBlob} loading="lazy" alt="Just a blob shape."/>
+                <img src={pinkPhotoBlob} loading="lazy" alt="Just a blob shape."/>
+                <img src={greyPhotoBlob} loading="lazy"alt="Just a blob shape."/>
             </div>
-            <img src={mainPhoto} className={classes.photo} />
-            <img src={mainPhoto} className={classes.photo} />
-            <img src={mainPhoto} className={classes.photo} />
+            <StaticImage
+                src="../../images/singing.jpg"
+                alt="A picture of me singing!"
+                loading="lazy"
+                style={{
+                    width: "180px",
+                    height: "180px",
+                    borderRadius: "100px",
+                    margin: "1em 0",
+                    zIndex: "0",
+                }}
+                placeholder="blurred"
+            />
+            <StaticImage
+                src="../../images/travel.jpg"
+                alt="A picture I took of Venice!"
+                loading="lazy"
+                style={{
+                    width: "180px",
+                    height: "180px",
+                    borderRadius: "100px",
+                    margin: "1em 0",
+                    zIndex: "0",
+                }}
+                placeholder="blurred"
+            />
+            <StaticImage
+                src="../../images/makeup.jpg"
+                alt="A picture of me doing makeup!"
+                loading="lazy"
+                style={{
+                    width: "180px",
+                    height: "180px",
+                    borderRadius: "100px",
+                    margin: "1em 0",
+                    zIndex: "0",
+                }}
+                placeholder="blurred"
+            />
         </div>
     );
 };
