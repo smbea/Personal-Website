@@ -35,7 +35,7 @@ const useStyles = createUseStyles({
 
     waveStatic: {
         width: "100%",
-        height: "19vh",
+        height: "fit-content",
         objectFit: "cover",
     },
 

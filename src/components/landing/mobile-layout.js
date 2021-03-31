@@ -7,7 +7,7 @@ import BlobShape from "./blob-shape";
 
 const useStyles = createUseStyles({
     blob: {
-        height: "100vh",
+        height: "85vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -18,7 +18,6 @@ const useStyles = createUseStyles({
     blobContent: {
         display: "flex",
         flexDirection: "column",
-        marginTop: "1em",
         alignItems: "center",
     },
     mainPhoto: {

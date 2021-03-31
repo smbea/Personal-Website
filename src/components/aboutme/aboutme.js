@@ -14,7 +14,10 @@ const useStyles = createUseStyles({
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-
+        "&.tablet": {
+            height: "fit-content",
+            margin: "0 1em",
+        },
     },
     verticalDisplay: {
         flexDirection: "column",
@@ -39,10 +42,11 @@ const useStyles = createUseStyles({
 export const AboutMe = () => {
     const classes = useStyles();
     const desktop = (useWindowSize() === "desktop");
+    const tablet = (useWindowSize() === "tablet");
 
     return (
         <Layout >
-            <div id="aboutme" className={classes.contentDiv}>
+            <div id="aboutme" className={tablet ? `${classes.contentDiv} tablet` : classes.contentDiv}>
                 <div className={classes.textContent}>
                     <Heading title="About Me"/>
                     <div>

@@ -4,6 +4,7 @@ import Bigb from "../../images/bigb.inline.svg";
 import BigbLight from "../../images/bigb.inline.dark.svg";
 
 import scrollTo from "gatsby-plugin-smoothscroll";
+import { useWindowSize } from "../../hooks/window-size";
 
 const useStyles = createUseStyles({
     brandIcon: {
@@ -15,6 +16,7 @@ const useStyles = createUseStyles({
     brandIconScroll: {
         transition: "0.5s",
         height: "50px",
+        alignItems: "center",
     },
     a: {
         cursor: "pointer",
@@ -24,17 +26,28 @@ const useStyles = createUseStyles({
 
 export const BrandIcon = ({ scroll }) => {
     const classes = useStyles();
+    const mobile = (useWindowSize() === "mobile");
+
+    const svg = (src, iconClass) => {
+        if (scroll || mobile)
+            return (
+                <img
+                    src={src}
+                    className={ `${classes.brandIconScroll} ${iconClass}`} height="120px"
+                />
+            );
+        else return (
+            <img
+                src={src}
+                className={ `${classes.brandIcon}  ${iconClass}`} height="120px"
+            />
+        );
+    };
 
     return (
         <a className={classes.a} onClick={() => scrollTo("#home")}>
-            <img
-                src={Bigb}
-                className={`${scroll ? classes.brandIconScroll : classes.brandIcon} darkIcon`} height="120px"
-            />
-            <img
-                src={BigbLight}
-                className={`${scroll ? classes.brandIconScroll : classes.brandIcon} lightIcon`} height="120px"
-            />
+            {svg(Bigb, "darkIcon")}
+            {svg(BigbLight, "lightIcon")}
         </a>
 
     );

@@ -14,9 +14,9 @@ const useStyles = createUseStyles({
         marginTop: "1em",
     },
     dimentionsMobile: {
-        marginTop: "5em",
+        marginTop: "8vh",
         width: "200vw",
-        height: "65vh",
+        height: "60vh",
     },
     dimentionsDesktop: {
         width: "60vw",

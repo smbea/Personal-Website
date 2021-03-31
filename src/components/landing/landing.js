@@ -14,6 +14,9 @@ const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
+        "&.mobile": {
+            height: "80vh",
+        },
     },
     blobContent: {
         display: "flex",
@@ -43,6 +46,10 @@ const useStyles = createUseStyles({
     dot: {
         color: "var(--yellow)",
     },
+    bottomLinks: {
+        position: "absolute",
+        bottom: "2em",
+    },
 
 });
 
@@ -50,8 +57,9 @@ export const Landing = () => {
     const classes = useStyles();
     const desktop = (useWindowSize() === "desktop");
     const mobile = (useWindowSize() === "mobile");
+    const tablet = (useWindowSize() === "tablet");
 
-    const Thing = () => (
+    const RegularLayout = () => (
         <div id="home" className={classes.blob}>
             <BlobShape />
             {desktop ?
@@ -78,6 +86,7 @@ export const Landing = () => {
                             <span className={classes.dot}>.
                             </span>
                             <br />I am Beatriz
+
                         </span>
                     </div>
                     <div className={classes.blobBody}>
@@ -85,12 +94,17 @@ export const Landing = () => {
                     </div>
                 </div>
             </div>
+            {tablet ?
+                <div className={classes.bottomLinks}>
+                    <FindMe absolute={false}/>
+                </div>
+                : null}
         </div>
     );
 
     return (
         <div>
-            {mobile ? <MobileLayout /> : <Thing />}
+            {mobile ? <MobileLayout /> : <RegularLayout />}
         </div>
     );
 };

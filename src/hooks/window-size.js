@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 const getDevice = () => {
-    if (document.documentElement.clientWidth > 800)
+    if (document.documentElement.clientWidth > 1024)
         return "desktop";
-    else if (document.documentElement.clientWidth <= 800 && document.documentElement.clientWidth >= 650)
+    else if (document.documentElement.clientWidth <= 1024 && document.documentElement.clientWidth >= 650)
         return "tablet";
     else return "mobile";
 };
