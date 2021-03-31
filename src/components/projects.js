@@ -5,7 +5,7 @@ import Layout from "./layout";
 import Card from "./card";
 import sinf from "../images/sinf.webp";
 import winerd from "../images/winerd.webp";
-import episa from "../images/episaproject.webp";
+import episa from "../images/episaProject.webp";
 import va from "../images/va.webp";
 import { useWindowSize } from "../hooks/window-size";
 
