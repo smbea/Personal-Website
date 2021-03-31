@@ -13,7 +13,6 @@ const useStyles = createUseStyles({
         boxShadow: "var(--box-shadow)",
         background: "var(--background)",
         "& > nav": {
-            alignItems: "center",
             margin: "0.2em 2em",
         },
     },

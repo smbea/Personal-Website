@@ -19,7 +19,6 @@ const useStyles = createUseStyles({
         maxHeight: "30px",
         "&.mobile": {
             marginRight: 0,
-            alignItems: "center",
         },
     },
     hoverBlob: {
