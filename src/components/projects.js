@@ -36,6 +36,7 @@ export const Projects = () => {
     return (
         <Layout>
             <div id="projects" className={styles.contentDiv}>
+
                 <Heading title="Projects"/>
 
                 <div className={styles.grid}>

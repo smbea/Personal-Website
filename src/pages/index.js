@@ -5,10 +5,12 @@ import Projects from "../components/projects";
 import Contacts from "../components/contacts";
 import Footer from "../components/footer";
 import NavBar from "../components/nav/navbar.js";
+import Wave from "../components/wave";
 import { Helmet } from "react-helmet";
+import { SEO } from "gatsby-plugin-seo";
 
 import "../css/global.scss";
-import Wave from "../components/wave";
+
 
 // markup
 const IndexPage = () => (
@@ -17,6 +19,11 @@ const IndexPage = () => (
             <meta charSet="utf-8" />
             <title>Bea Mendes</title>
         </Helmet>
+        <SEO
+            title="Home"
+            description="Hello! Welcome to my website."
+            pagePath="/"
+        />
         <NavBar />
         <Landing />
         <AboutMe />

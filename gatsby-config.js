@@ -31,7 +31,7 @@ module.exports = {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "pages",
-                path: "./src/pages/",
+                path: "./src/images/previewImage.png",
             },
             __key: "pages",
         },
@@ -44,5 +44,13 @@ module.exports = {
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         "gatsby-plugin-react-helmet",
+        {
+            resolve: "gatsby-plugin-seo",
+            options: {
+                siteName: "Beatriz Mendes",
+                defaultSiteImage: "./src/images/icon.png",
+                siteUrl: "https://beatrizmendes.me/",
+            },
+        },
     ],
 };
