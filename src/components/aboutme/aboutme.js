@@ -52,22 +52,22 @@ export const AboutMe = () => {
                     <Heading title="About Me"/>
                     <div>
                         <p>
-                            Hey there! My name is Beatriz and I’m a software engineer currently based in Porto, Portugal.
-                            I’m on the last year of my Informatics and Computing Engineering Master’s degree.
+                            Hey there! My name is Beatriz, and I'm a software engineer currently based in Porto, Portugal.
+                            I'm in the last year of my Informatics and Computing Engineering Master's degree.
+
                         </p>
                         <p>
-                            My main interests are mobile and web development but my enthusiasm for technology also manifests
+                            My main interests are mobile and web development, but my enthusiasm for technology also manifests
                             itself through UX/UI design. I care about developing a functional yet beautiful product.
                         </p>
                         <p>
                             In my free time, I have done a bit of freelancing on
                             <a href="https://www.fiverr.com/users/thesmbea" target="_blank" rel="noreferrer" className={`${classes.aboutMeLink} link`}>Fiverr</a>
-                            as well as helped build and manage my mother's small
-                            business digital presence.
+                            as well as helped build and manage my mother's small business digital presence.
                         </p>
                         <p>
-                            Some of my hobbies include singing, travelling, experimenting with makeup, taking and editing
-                            photos. I like hanging out in coffee shops and snuggling with my cat.
+                            Some of my hobbies include singing, traveling, experimenting with makeup, taking and editing photos.
+                            I like hanging out in coffee shops and snuggling with my cat.
                         </p>
                     </div>
                 </div>
