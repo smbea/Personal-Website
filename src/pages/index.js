@@ -7,10 +7,7 @@ import Footer from "../components/footer";
 import NavBar from "../components/nav/navbar.js";
 import Wave from "../components/wave";
 import { Helmet } from "react-helmet";
-import { SEO } from "gatsby-plugin-seo";
-
 import "../css/global.scss";
-
 
 // markup
 const IndexPage = () => (
@@ -19,10 +16,29 @@ const IndexPage = () => (
             <meta charSet="utf-8" />
             <title>Bea Mendes</title>
         </Helmet>
-        <SEO
-            title="Home"
-            description="Hello! Welcome to my website."
-            pagePath="/"
+        <Helmet
+            htmlAttributes={{
+                lang: "en",
+            }}
+            title={"Beatriz Mendes"}
+            meta={[
+                {
+                    name: "description",
+                    content: "Wemcome to my website! Get to know me and my projects.",
+                },
+                {
+                    property: "og:title",
+                    content: "Beatriz Mendes",
+                },
+                {
+                    property: "og:description",
+                    content: "Wemcome to my website! Get to know me and my projects.",
+                },
+                {
+                    property: "og:image",
+                    content: "./src/images/previewImage.png",
+                },
+            ]}
         />
         <NavBar />
         <Landing />

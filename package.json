@@ -34,7 +34,6 @@
     "gatsby-plugin-react-helmet": "^3.10.0",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^4.0.2",
-    "gatsby-plugin-seo": "0.0.2",
     "gatsby-plugin-sharp": "^2.14.3",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^2.11.1",

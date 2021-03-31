@@ -1,6 +1,11 @@
 module.exports = {
     siteMetadata: {
-        title: "My Website",
+        title: "Beatriz Mendes",
+        description:
+      "Wemcome to my website! Get to know me and my projects.",
+        url: "https://beatrizmendes.me", // No trailing slash allowed!
+        image: "./src/images/previewImage.png", // Path to your image you placed in the 'static' folder
+        author: "Beatriz Mendes",
     },
     plugins: [
         {
@@ -31,7 +36,7 @@ module.exports = {
             resolve: "gatsby-source-filesystem",
             options: {
                 name: "pages",
-                path: "./src/images/previewImage.png",
+                path: "./src/pages/",
             },
             __key: "pages",
         },
@@ -44,13 +49,5 @@ module.exports = {
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         "gatsby-plugin-react-helmet",
-        {
-            resolve: "gatsby-plugin-seo",
-            options: {
-                siteName: "Beatriz Mendes",
-                defaultSiteImage: "./src/images/icon.png",
-                siteUrl: "https://beatrizmendes.me/",
-            },
-        },
     ],
 };
