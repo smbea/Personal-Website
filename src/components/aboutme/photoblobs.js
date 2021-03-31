@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 import React from "react";
 import { createUseStyles } from "react-jss";
-import mainPhoto from "../../images/mainphoto.jpg";
 import yellowPhotoBlob from "../../images/yellowPhotoBlob.png";
 import pinkPhotoBlob from "../../images/pinkPhotoBlob.png";
 import greyPhotoBlob from "../../images/greyPhotoBlob.png";
@@ -68,7 +67,7 @@ export const PhotoBlobs = () => {
                 placeholder="blurred"
             />
             <StaticImage
-                src="../../images/makeup.jpg"
+                src="../../images/makeup.JPG"
                 alt="A picture of me doing makeup!"
                 loading="lazy"
                 style={{
