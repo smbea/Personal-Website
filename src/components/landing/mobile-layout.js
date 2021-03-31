@@ -63,7 +63,7 @@ export const MobileLayout = () => {
                         width: "65vw",
                         height: "38vh",
                         minHeight: "200px",
-                        maxHeight: "200px",
+                        minWidth: "200px",
                     }}
                     placeholder="blurred"
                 />
