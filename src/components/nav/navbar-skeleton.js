@@ -10,7 +10,9 @@ const useStyles = createUseStyles({
         display: "flex",
         justifyContent: "space-between",
         margin: "1.2em 2em",
-        "&.mobile": {
+        alignItems: "flex-start",
+
+        "&.center": {
             alignItems: "center",
         },
     },
@@ -34,7 +36,7 @@ export const NavBarSkeleton = () => {
 
 
     return (
-        <nav className={mobile ? `${classes.navBar} mobile` : classes.navBar}>
+        <nav className={(scroll || mobile) ? `${classes.navBar} center` : classes.navBar}>
             <BrandIcon scroll={scroll}/>
             {mobile ? <MobileMenu /> : <NavItems />}
         </nav>
