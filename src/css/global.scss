@@ -21,6 +21,7 @@ body {
   color: var(--text-color);
   font-family: "Futura";
   scroll-behavior: smooth;
+  transition: background-color 200ms ;
 
   & .lightIcon {
     display: none;
