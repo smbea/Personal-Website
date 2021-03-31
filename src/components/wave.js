@@ -48,7 +48,7 @@ export const Wave = () => {
     const WaveImage = () => {
         if (!desktop)
             return (
-                <img className={styles.waveStatic} src={waveStatic}/>
+                <img className={styles.waveStatic} src={waveStatic} loading="lazy" alt="Wave background"/>
 
             );
         else return (

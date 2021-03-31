@@ -34,12 +34,14 @@ export const BrandIcon = ({ scroll }) => {
                 <img
                     src={src}
                     className={ `${classes.brandIconScroll} ${iconClass}`} height="120px"
+                    alt="Logo"
                 />
             );
         else return (
             <img
                 src={src}
                 className={ `${classes.brandIcon}  ${iconClass}`} height="120px"
+                alt="Logo"
             />
         );
     };

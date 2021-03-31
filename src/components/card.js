@@ -93,7 +93,7 @@ export const Card = (props) => {
         <div className={`${styles.card} ${image ? "tall" : null}`}>
             <img src={yellowBlob} className={styles.bulletBlob} width="30px"/>
             {image
-                ? <img src={image} className={styles.headerImage} height="180px"  />
+                ? <img src={image} className={styles.headerImage} height="180px" loading="lazy" alt="Image of a project" />
                 : null
             }
             <div className={styles.cardBody}>
