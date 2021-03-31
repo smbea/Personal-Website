@@ -12,7 +12,7 @@ import yellowBlob from "../images/yellowBlob.svg";
 const useStyles = createUseStyles({
     card: {
         minWidth: "270px",
-        boxShadow: "0.5px 0.5px 3px rgb(0 0 0 / 10%)",
+        boxShadow: "0.5px 0.5px 3px rgb(0 0 0 / 20%)",
         borderRadius: "5px",
         display: "flex",
         flexDirection: "column",
@@ -53,7 +53,7 @@ const useStyles = createUseStyles({
     },
     projectDescription: {
         display: "flex",
-        fontSize: "14px",
+        fontSize: "16px",
     },
     cardTextContent: {
         marginLeft: "1.4em",
@@ -71,7 +71,7 @@ const useStyles = createUseStyles({
     keywords: {
         color: "var(--yellow)",
         marginRight: ".8em",
-        fontSize: "12px",
+        fontSize: "14px",
         display: "inline-block",
     },
 });
