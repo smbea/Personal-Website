@@ -14,9 +14,10 @@ const useStyles = createUseStyles({
         justifyContent: "center",
         alignItems: "center",
         position: "relative",
-        "&.mobile": {
-            height: "80vh",
+        "&.tablet": {
+            height: "94vh",
         },
+
     },
     blobContent: {
         display: "flex",
@@ -60,7 +61,7 @@ export const Landing = () => {
     const tablet = (useWindowSize() === "tablet");
 
     const RegularLayout = () => (
-        <div id="home" className={classes.blob}>
+        <div id="home" className={tablet  ? `${classes.blob} tablet` : classes.blob}>
             <BlobShape />
             {desktop ?
                 <FindMe absolute={true}/>
