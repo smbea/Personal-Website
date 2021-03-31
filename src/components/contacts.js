@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
     },
     email: {
         fontSize: "20px",
-        fontFamily: "RamonaBold",
+        fontFamily: "RamonaBold, sans-serif",
         overflow: "inherit",
         color: "var(--text-color)",
     },

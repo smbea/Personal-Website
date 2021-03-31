@@ -19,7 +19,7 @@ html, body {
 body {
   background: var(--background);
   color: var(--text-color);
-  font-family: "Futura";
+  font-family: "Futura", sans-serif;
   scroll-behavior: smooth;
   transition: background-color 200ms ;
 
@@ -59,21 +59,24 @@ body.dark {
 
 @font-face {
     font-family: "Ramona";
+    font-display: auto;
     src: url("../fonts/Ramona-Light.ttf");
 }
 
 @font-face {
     font-family: "Futura";
+    font-display: auto;
     src: url("../fonts/futura_medium.ttf");
 }
 
 @font-face {
     font-family: "RamonaBold";
+    font-display: auto;
     src: url("../fonts/Ramona-Bold.ttf");
 }
 
 .heading {
-    font-family: "Ramona";
+    font-family: "Ramona", sans-serif;
 }
 
 $pink:var(--pink);

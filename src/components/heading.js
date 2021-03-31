@@ -13,7 +13,7 @@ const useStyles = createUseStyles(
             zIndex: -1,
         },
         title: {
-            fontFamily: "RamonaBold",
+            fontFamily: "RamonaBold, sans-serif",
             margin: 0,
             padding: "0 0.2em",
             fontSize: "1.7rem",

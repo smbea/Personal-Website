@@ -8,7 +8,7 @@ import {
 const useStyles = createUseStyles({
     findmeText: {
         fontSize: "20px",
-        fontFamily: "Ramona",
+        fontFamily: "Ramona, sans-serif",
         "&:span": {
             marginRight: "0.5em",
         },
