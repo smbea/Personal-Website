@@ -65,7 +65,7 @@ export const Projects = () => {
                         title="Winerd"
                         image={winerd}
                         description="Web application for inter-company product management
-                         with Primavera EPR integration."
+                         with Primavera ERP integration."
                         linkGithub="https://github.com/smbea/FEUP-SINF"
                         keywords={[
                             { id: 1, kw: "Node/Express" }, { id: 2, kw: "PostgreSQL" },
@@ -76,7 +76,7 @@ export const Projects = () => {
                     <Card
                         title="Movie Analytics Platform"
                         image={va}
-                        description="Interactive movie statistics platform using 3D.js."
+                        description="Interactive movie statistics platform using D3.js."
                         linkGithub="https://github.com/smbea/visual-analytics"
                         keywords={[
                             { id: 1, kw: "JavaScript" }, { id: 2, kw: "D3.js" }, { id: 3, kw: "HTML/CSS" },
