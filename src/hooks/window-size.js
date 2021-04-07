@@ -10,7 +10,7 @@ const getDevice = () => {
 
 export const useWindowSize = () => {
 
-    const [device, setDevice] = useState("mobile");
+    const [device, setDevice] = useState("desktop");
 
     const handleResize = () => {
         setDevice(getDevice());
