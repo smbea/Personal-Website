@@ -52,18 +52,13 @@ export const AboutMe = () => {
                     <Heading title="About Me"/>
                     <div>
                         <p>
-                            Hey there! My name is Beatriz, and I'm a software engineer currently based in Porto, Portugal.
-                            I'm in the last year of my Informatics and Computing Engineering Master's degree.
-
+                            Hey there! My name is Beatriz and I’m a software engineer based in Berlin, Germany.
                         </p>
                         <p>
-                            My main interests are mobile and web development, but my enthusiasm for technology also manifests
-                            itself through UX/UI design. I care about developing a functional yet beautiful product.
+                            I’m currently working as a frontend developer but I would be interested in getting back to full-stack working enviroment.
                         </p>
                         <p>
-                            In my free time, I have done a bit of freelancing on
-                            <a href="https://www.fiverr.com/users/thesmbea" target="_blank" rel="noreferrer" className={`${classes.aboutMeLink} link`}>Fiverr</a>
-                            as well as helped build and manage my mother's small business digital presence.
+                            My main interests are mobile and web development but my enthusiasm for technology also manifests itself through UX/UI design. I care about developing a functional yet beautiful product.
                         </p>
                         <p>
                             Some of my hobbies include singing, traveling, experimenting with makeup, taking and editing photos.
