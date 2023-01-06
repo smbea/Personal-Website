@@ -21,7 +21,7 @@ export const Footer = () => {
 
     return (
         <div className={styles.contentDiv}>
-            Beatriz Mendes 2020
+            Beatriz Mendes © {new Date().getFullYear()}
         </div>
     );
 };
