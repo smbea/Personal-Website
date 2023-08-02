@@ -55,7 +55,7 @@ export const AboutMe = () => {
                             Hey there! My name is Beatriz and I’m a software engineer based in Berlin, Germany.
                         </p>
                         <p>
-                            I’m currently working as a frontend developer but I am interested in getting back to full-stack working enviroment.
+                            I’m interested in working as a frontend or full-stack engineer.
                         </p>
                         <p>
                             My main interests are mobile and web development. My enthusiasm for technology also manifests itself through UX/UI design. I care about developing a functional yet beautiful product.
